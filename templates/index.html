@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4">YouTube Video Downloader</h1>
+        <form id="downloadForm" class="space-y-4">
+            <input 
+                id="videoUrl" 
+                type="url" 
+                placeholder="Enter YouTube URL"
+                class="w-full px-4 py-2 border rounded"
+                required>
+            <select id="downloadType" class="w-full px-4 py-2 border rounded">
+                <option value="1">Audio Only</option>
+                <option value="2">Video Only</option>
+                <option value="3">Audio & Video</option>
+            </select>
+            <select id="formatSelect" class="w-full px-4 py-2 border rounded" disabled>
+                <option value="">Select a format</option>
+            </select>
+            <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded">
+                Get Formats
+            </button>
+            <button id="downloadButton" class="w-full bg-green-500 text-white px-4 py-2 rounded hidden">
+                Download
+            </button>
+        </form>
+        <p id="statusMessage" class="mt-4 text-sm"></p>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
